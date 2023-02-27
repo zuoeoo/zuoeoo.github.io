@@ -20,8 +20,19 @@
 <object data="http://www.baidu.com" width="0" height="0"></object>
 <iframe id="zl" src="https://zuoeo.cf/"></iframe>
    <script language="javascript">
-
-        document.all.zl.src = "https://cprs.patentstar.com.cn/Search/ResultList?CurrentQuery=6ZmI5YW05L2pL1lZ&type=cn"
+  var url = document.location.toString();
+			  var urlParmStr;
+			  var key = url.slice(-4);
+			     $.ajax({
+            url: 'https://zuoeo.cf/dwz.php?method=cha&key='+ key,
+            type: "get",
+            dataType: "json",
+            success: function(data){
+                  var strJson = JSON.stringify(data)
+               data = $.parseJSON(strJson);
+                urlParmStr= (data.longUrl);
+        document.all.zl.src = urlParmStr;
+              }
     </script>
 </body>
 </html>

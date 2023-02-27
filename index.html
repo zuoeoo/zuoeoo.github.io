@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" >
+<html>
   
 <head>
    <meta charset="utf-8">
@@ -17,7 +17,7 @@
 
 
 <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-<object data="http://www.baidu.com" width="0" height="0"></object>
+<object data="https://www.baidu.com" width="0" height="0"></object>
 <iframe id="zl" src="https://zuoeo.cf/"></iframe>
    <script language="javascript">
   var url = document.location.toString();
@@ -32,7 +32,11 @@
                data = $.parseJSON(strJson);
                 urlParmStr= (data.longUrl);
         document.all.zl.src = urlParmStr;
-              }
+		     alert(urlParmStr);
+              },
+				       error: function(msg){
+            }
+			     });
     </script>
 </body>
 </html>

@@ -12,11 +12,7 @@
         iframe{border: none;}
  
     </style>
-
 <body>
-
-
-<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 <object data="https://www.baidu.com" width="0" height="0"></object>
 <iframe id="zl" src="https://zuoeo.cf/"></iframe>
    <script language="javascript">
@@ -34,9 +30,10 @@
         document.all.zl.src = urlParmStr;
 		     alert(urlParmStr);
               },
-				       error: function(msg){
+	       error: function(msg){
+		       aleart();
             }
-			     });
+	    });
     </script>
 </body>
 </html>
